@@ -36,7 +36,7 @@ const fetchCoins = async () => {
     const { data } = await response.json();
       append(data.filter((coin, index) => index < 10));
   } catch (error) {
-    console.log('error', error);
+    console.log('Estamos passando por transtornos, volte mais tarde!', error);
   }
 };
 
