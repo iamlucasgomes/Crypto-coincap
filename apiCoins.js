@@ -33,8 +33,7 @@ const fetchCoins = async () => {
   };
   try {
     const response = await fetch(endPoint, requestOptions);
-    const database = await response.json();
-    const { data } = database;
+    const { data } = await response.json();
       append(data.filter((coin, index) => index < 10));
   } catch (error) {
     console.log('error', error);
